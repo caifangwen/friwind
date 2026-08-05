@@ -1,0 +1,19 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.env
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+__unconfig*
+todos.json
+
+# WorkBuddy assistant memory (not project code)
+.workbuddy-ai/
+
+# Windows reserved-name artifact (e.g. accidental `>nul` redirect)
+nul
