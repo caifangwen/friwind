@@ -3,11 +3,11 @@ import { Link } from '@tanstack/react-router'
 /**
  * Footer
  * ------
- * 浅色 mega footer ——
- *  - 跟 body 同色系背景 + 顶部分隔线，不形成"硬边界"
- *  - 顶上是 4 列链接 + 巨字号品牌字
- *  - 底部是细线条 meta
- *  整体像文档落款，不是页面结束。
+ * Light-weight mega footer ——
+ *  - Shares the body palette + a top hairline divider
+ *  - Top: 4 columns of links + an oversized brand wordmark
+ *  - Bottom: hairline meta row
+ * Reads as a sign-off, not an ending.
  */
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -15,16 +15,16 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="site-footer__inner">
-        {/* 顶部：4 列 + 巨大品牌字 */}
+        {/* Top — 4 columns + oversized brand wordmark */}
         <div className="site-footer__grid">
           <FooterColumn
             title="Shop"
             links={[
-              { label: '全部商品', to: '/shop' },
-              { label: '针织', to: '/shop/collections/knitwear' },
-              { label: '陶器', to: '/shop/collections/ceramics' },
-              { label: '包袋', to: '/shop/collections/bags' },
-              { label: '礼品卡', to: '/shop' },
+              { label: 'Everything', to: '/shop' },
+              { label: 'Knitwear', to: '/shop/collections/knitwear' },
+              { label: 'Ceramics', to: '/shop/collections/ceramics' },
+              { label: 'Bags', to: '/shop/collections/bags' },
+              { label: 'Gift cards', to: '/shop' },
             ]}
           />
           <FooterColumn
@@ -48,8 +48,8 @@ export default function Footer() {
           <div className="site-footer__newsletter">
             <p className="site-footer__column-title">Newsletter</p>
             <p className="site-footer__copy">
-              每月一封信 ——
-              新品上架、工坊笔记、限时活动。无广告。
+              One letter a month — new arrivals, workshop notes, occasional
+              sales. No advertising, no tracking pixels.
             </p>
             <form
               className="site-footer__form"
@@ -68,12 +68,12 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* 中部：巨字号品牌字 */}
+        {/* Middle — oversized brand wordmark */}
         <div className="site-footer__wordmark" aria-hidden="true">
           NORTHWIND
         </div>
 
-        {/* 底部：细线条 meta */}
+        {/* Bottom — hairline meta */}
         <div className="site-footer__meta">
           <p className="m-0">© {year} Northwind Goods Co. All rights reserved.</p>
           <p className="m-0 site-footer__credit">

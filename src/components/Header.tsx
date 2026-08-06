@@ -5,24 +5,25 @@ import ThemeToggle from './ThemeToggle'
 /**
  * Header
  * ------
- * 极简页头 ——
- *  - 全宽，跟内容在同一个文档流里，不"装在盒子里"
- *  - 不用 backdrop-blur、不用边框、不用阴影
- *  - 滚动时只加一条 1px 极细的下划线提示位置（用 CSS 滚动检测）
- *  - logo 用大字号纯文字，nav 文字小且宽松
+ * Minimal site chrome ——
+ *  - Full-bleed, sits in the same document flow as the content (no boxed shell)
+ *  - No backdrop-blur, no border, no shadow
+ *  - On scroll, a 1px hairline fades in below to anchor position (CSS scroll detection)
+ *  - Logo is oversized plain wordmark; nav is small + spacious;
+ *  - Right-side actions are sparse small icons (no boxed buttons)
  */
 export default function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        {/* logo: 大字纯文字，无边框无圆角 */}
-        <Link to="/" className="site-logo" aria-label="返回首页">
+        {/* Logo — oversized plain wordmark, no border, no radius */}
+        <Link to="/" className="site-logo" aria-label="Back to homepage">
           <span className="site-logo__mark">▲</span>
           <span className="site-logo__word">Northwind</span>
         </Link>
 
-        {/* 主导航：宽松留白小字 */}
-        <nav className="site-nav" aria-label="主导航">
+        {/* Primary nav — spacious small labels */}
+        <nav className="site-nav" aria-label="Primary navigation">
           <Link
             to="/shop"
             className="nav-link"
@@ -54,7 +55,7 @@ export default function Header() {
           </a>
         </nav>
 
-        {/* 右侧操作：松散排布，无背景框 */}
+        {/* Right-side actions — sparse, no boxed backgrounds */}
         <div className="site-actions">
           <a
             href="https://github.com/TanStack"
